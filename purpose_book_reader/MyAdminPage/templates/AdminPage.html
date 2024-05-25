@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href='{% static "AdminPage.css" %}?{% now "U" %}'></head>
+<body>
+    <h1>Admin Page</h1>
+   
+    <center>
+        <div id = "FormDiv">
+            <form action="{% url 'SubmitBook' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="BookCover" accept="image/*">
+
+                <input type="text" name="BookName" placeholder="Enter Book Name">
+
+
+                <input type="file" name="BookPdf" accept="application/pdf">
+
+                <button type="button">Submit Data</button>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

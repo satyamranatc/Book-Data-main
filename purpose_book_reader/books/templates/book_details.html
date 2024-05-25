@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-details {
+            text-align: center;
+        }
+
+        .book-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-details h1 {
+            margin-top: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .book-details p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="book-details">
+            <img src="{{ book.cover_image.url }}" alt="{{ book.name }}">
+
+            <h1>{{ book.name }}</h1>
+
+
+            <object data="{{ book.pdf.url }}" type="application/pdf" width="100%" height="600px">
+                <p>Your browser does not support PDFs. <a href="{{ book.pdf.url }}">Download the PDF</a>.</p>
+            </object>
+
+        
+        </div>
+        <a href="{% url 'book_list' %}" class="back-link">Back to book list</a>
+    </div>
+</body>
+</html>

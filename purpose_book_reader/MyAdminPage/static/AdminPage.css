@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    font-family: sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+#FormDiv
+{
+    height: 400px;
+    width: 350px;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+#FormDiv form
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#FormDiv form input
+{
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid black;
+    outline: none;
+}
+
+#FormDiv form button
+{
+    padding: 10px 20px;
+    background-color: rgb(255, 0, 76);
+    color: white;
+    font-family: sans-serif;
+    border-radius: 25px;
+    border: none;
+}
